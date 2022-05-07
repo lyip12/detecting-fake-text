@@ -1,0 +1,329 @@
+:root {
+    --padding: 80px;
+    --background: #ffffff;
+    --background_gray: #f4f4f4;
+    --background_fade: #e8e8e8;
+    --main: #161616;
+    --dark: #393939;
+    --gray: #d6d6d6;
+    --highlight: #0f62fe;
+    --lablogo: url("../data/light_mitibm.png");
+    --back_blur: rgba(255, 255, 255, 0.8);
+    --main_blur: rgba(0, 0, 0, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--main);
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 45px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: var(--main);
+    border-bottom: solid 1px var(--dark);
+    z-index: 99;
+}
+
+#headertext {
+    font-size: 16px;
+    display: block;
+    margin: 0;
+    color: var(--background);
+}
+
+.mitibmlogo {
+    font-weight: 400;
+    background-color: #BA2E7D;
+    background-image: linear-gradient(45deg, #BA2E7D, #276CFF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main_content {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 630px;
+    padding: var(--padding) calc(var(--padding) * 0.8);
+    background: var(--background_fade);
+    border-right: solid 1px var(--gray);
+}
+
+.main_content > h2,
+.main_content > label {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main_content > div{
+    background: var(--background);
+}
+
+.main_content > div > div {
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.main_result {
+    position: fixed;
+    background: var(--background);
+    top: 45px;
+    left: 630px;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: calc(var(--padding) * 0.8);
+    padding-bottom: 0;
+}
+
+p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 0;
+}
+
+.twitter_block {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    width: 80px;
+    font-size: 12px;
+    padding: 10px;
+    background: var(--background_fade);
+    border-radius: 3px;
+}
+
+.twitter_block p,
+.twitter_block a {
+    font-size: 12px;
+    line-height: 14px !important;
+}
+
+a:hover {
+    color: var(--highlight);
+}
+
+label {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+em {
+    opacity: 0.5;
+}
+
+.notification {
+    display: block;
+    padding: 6px 9px;
+    background: #deedff;
+    border-left: solid 5px var(--highlight);
+    color: var(--highlight);
+}
+
+.notification .fa {
+    margin-right: 5px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: solid 1px var(--gray);
+}
+
+.right_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--highlight);
+    padding-top: 20px;
+}
+
+.right_text p {
+    white-space: nowrap;
+    margin: 0;
+    font-size: 13px;
+}
+
+.right_text hr {
+    width: 100%;
+    margin: 0 10px 0 0;
+    border-top: dotted 1px var(--highlight);
+    opacity: 0.5;
+}
+
+#demo_dropdown {
+    width: 270px;
+    height: 35px;
+    z-index: 9999;
+}
+
+#demo_dropdown:hover > .demos {
+    height: 210px !important;
+}
+
+#demo_dropdown:hover > .select_demo {
+    background: var(--background_fade);
+}
+
+.demos {
+    position: absolute;
+    width: 270px;
+    /* height: 210px; */
+    height: 0;
+    overflow-y: hidden;
+    z-index: 99999;
+}
+
+.select_demo,
+.demoBtn {
+    display: block;
+    border-radius: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--background_gray);
+    color: var(--main);
+    border: none;
+    border-bottom: solid 1px var(--background_fade);
+    padding: 0 12px 0 9px;
+    margin: 0;
+}
+
+.demoBtn:hover,
+.select_demo:hover {
+    background: var(--background_fade);
+    cursor: pointer;
+}
+
+.demo_label {
+    display: block;
+    margin: 10px 0 6px 0;
+}
+
+#test_text {
+    padding: 6px 9px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--main);
+    font-weight: 300;
+    border: none;
+    border-bottom: solid 1px var(--gray);
+    background: var(--background_gray);
+    margin-bottom: 10px;
+}
+
+#submit_text_btn {
+    border: none;
+    border-radius: 2px;
+    padding: 9px 16px;
+    background: var(--main);
+    color: var(--background);
+    float: right;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+#submit_text_btn:hover {
+    cursor: pointer;
+    background: var(--dark);
+}
+
+#result_empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    margin: calc(var(--padding) / 2) 0;
+    border: dashed 3px var(--gray);
+    color: var(--dark);
+    opacity: 0.3;
+}
+
+#all_result {
+    margin-top: calc(var(--padding) / 2);
+    overflow-y: scroll;
+    border: solid 1px var(--background_fade);
+    padding: 15px;
+}
+
+#stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#all_result h3 {
+    margin-top: 0;
+}
+
+.colorThreshold {
+    border: none !important;
+    background: #f4f4f4;
+}
+
+.LMF {
+    padding-left: 20px !important;
+    border-left: solid 3px var(--gray) !important;
+    margin-top: 20px !important;
+}
+
+.LMF div {
+    font-size: 17px !important;
+    font-weight: 300 !important;
+}
+
+.full_screen {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    height: 35px;
+}
+
+.full_screen > span {
+    border-radius: 50px;
+    font-size: 15px;
+    color: var(--background);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full_screen > span:hover {
+    background: var(--dark);
+    cursor: pointer;
+}
+
+#unFull {
+    display: none;
+}
