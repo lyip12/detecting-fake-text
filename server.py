@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     if not args.no_cors:
         CORS(app.app, headers='Content-Type')
-    app.run(host="localhost", port=9874)
+    app.run(host='9.239.149.79', port=9874)
     # app.run(port=int(args.port), debug=not args.nodebug, host=args.address)
 else:
     args, _ = parser.parse_known_args()
