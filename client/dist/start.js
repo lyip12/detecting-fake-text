@@ -275,9 +275,9 @@
                 maxValue: -1
             }, this.css_name = "LMF", this.options = {
                 gltrMode: d.topk,
-                diffScale: i.k().exponent(.3).range(["#b4e876", "#fff"]),
-                fracScale: i.j().range(["#fff", "#b4e876"]),
-                topkScale: i.l().domain([10, 100, 1e3]).range(["#ADFF80", "#FFEA80", "#FF9280", "#E5B0FF"])
+                diffScale: i.k().exponent(.3).range(["#6881ff", "#fff"]),
+                fracScale: i.j().range(["#fff", "#6881ff"]),
+                topkScale: i.l().domain([10, 100, 1e3]).range(["#e86377", "#d1a7ed", "#c8e5fe", "#ebebeb"])
             }, this.superInitHTML(s), this._init()
         }
         _init() {}

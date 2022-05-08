@@ -151,7 +151,7 @@
         <div id="result_desc">
         <label>Result Visualization</label>
         <hr>
-        <p>Each text is analyzed by how likely each word would be the predicted word given the context to the left. If the actual used word would be in the top 10 predicted words the background is colored <span style="background: #ADFF80">green</span>, for top 100 in <span style="background: #FFEA80">yellow</span>, top 1000 <span style="background: #FF9280">red</span>, otherwise <span style="background: #E5B0FF">violet</span>. Try some sample texts from below and see for yourself if you can spot the difference between machine generated text and human generated text or try your own. <em>(Tip: hover over the words for more detail)</em></p>
+        <p>Each text is analyzed by how likely each word would be the predicted word given the context to the left. If the actual used word would be in the top 10 predicted words the background is highlighted in <span style="background: #e86377">gray</span>, otherwise <span style="background: #d1a7ed">top 100</span>, <span style="background: #c8e5fe">top 1000</span>, and <span style="background: #ebebeb">> 1000</span>. Natural writing actually more frequently selects unpredictable words compare to that of generated text - meaning that the closer to top the predicted word is, the likeliness that it is generated. Try some sample texts from below and see for yourself if you can spot the difference between machine generated text and human generated text or try your own. <em>(Tip: hover over the words for more detail)</em></p>
         <p>The histograms show some statistic about the text: Frac(p) describes the fraction of probability for the actual word divided by the maximum probability of any word at this position.The Top 10 entropy describes the entropy along the top 10 results for each word.</p>
         </div>
         <div id="result_empty">
@@ -175,7 +175,7 @@
             </div>
             <hr>
             <h3>Text Analysis Highlighted by Likeliness Prediction</h3>
-            <div id="#res">
+            <div id="res">
                 <div style="display: inline-block;padding-right: 20px;">
                     <button id="mode_topk" class="btn_mode selected"> Top K
                     </button>
@@ -185,20 +185,21 @@
                 <div style="display: inline-block;">
                     Colors (top k):
                     <div
-                        style="width: 15px; height: 15px;background-color: #ADFF80; display: inline-block;position: relative; top:3px; margin-left: 5px;">
+                        style="width: 15px; height: 15px;background-color: #e86377; display: inline-block;position: relative; top:3px; margin-left: 5px;">
                     </div>
                     <input value=10 type="number" id="color1" class='colorThreshold' style="width:50px;" />
                     <div
-                        style="width: 15px; height: 15px;background-color: #FFEA80; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
+                        style="width: 15px; height: 15px;background-color: #d1a7ed; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
                     </div>
                     <input value=100 type="number" id="color2" class='colorThreshold' style="width:50px;" />
                     <div
-                        style="width: 15px; height: 15px;background-color: #FF9280; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
+                        style="width: 15px; height: 15px;background-color: #c8e5fe; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
                     </div>
                     <input value=1000 type="number" id="color3" class='colorThreshold' style="width:50px;" />
                     <div
-                        style="width: 15px; height: 15px;background-color: #E5B0FF; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
+                        style="width: 15px; height: 15px;background-color: #ebebeb; display: inline-block;position: relative;  top:3px; margin-left: 5px;">
                     </div>
+                    <label>Beyond</label>
                 </div>
 
                 <div id="results" style="margin-top: 10px;">
