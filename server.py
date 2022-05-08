@@ -134,8 +134,8 @@ if __name__ == '__main__':
 
     if not args.no_cors:
         CORS(app.app, headers='Content-Type')
-
-    app.run(port=int(args.port), debug=not args.nodebug, host=args.address)
+    app.run(host='9.239.149.81', port=9874)
+    # app.run(port=int(args.port), debug=not args.nodebug, host=args.address)
 else:
     args, _ = parser.parse_known_args()
     # load_projects(args.dir)
